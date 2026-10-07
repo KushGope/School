@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import About from "./About";
 import AdmissionForm from "./data/AdmissionForm";
 import Loginpage from "./login/Login";
+import Logout from "./login/Logout";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/admission" element={<AdmissionForm />} />
           <Route path="/login" element={<Loginpage />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>

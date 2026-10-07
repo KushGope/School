@@ -1,14 +1,27 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import { NAV_LINKS } from "../data/SiteData";
-import { UserIcon } from "./Icons";
+import { UserIcon, LogoutIcon } from "./Icons";
+import { useAuth } from "../context/AuthContext";
+// import { useAuth } from "./context/AuthContext";
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const { isLoggedIn, logout } = useAuth();
 
   const handleLoginClick = async () => {
-    navigate("/login");
+    if (isLoggedIn) {
+      // Logout
+      logout();
+      console.log("Login: " + localStorage.getItem("isLoggedIn"));
+      navigate("/");
+    } else {
+      // Login
+      navigate("/login");
+    }
   };
+
   const handleNavClick = (link) => {
     if (link === "Home") {
       navigate("/");
@@ -53,11 +66,18 @@ export default function Navbar() {
       <button
         type="button"
         onClick={handleLoginClick}
-        className="text-text-dark/80 hover:text-accent-green cursor-pointer p-1"
+        title={isLoggedIn ? "Logout" : "Login"}
+        className={`cursor-pointer p-1 transition-colors ${
+          isLoggedIn
+            ? "text-red-500 hover:text-red-600"
+            : "text-text-dark/80 hover:text-accent-green"
+        }`}
+        //className="text-text-dark/80 hover:text-accent-green cursor-pointer p-1"
       >
-        <UserIcon />
+        {isLoggedIn ? <LogoutIcon /> : <UserIcon />}
+
+        {/* <UserIcon /> */}
       </button>
-      {/* Display the backend response message right here on the UI */}
     </header>
   );
 }

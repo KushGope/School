@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext";
 
 function Loginpage() {
+  const { login } = useAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -26,12 +29,13 @@ function Loginpage() {
     if (response.ok) {
       alert("Login successful!");
       console.log("Login successful!");
+      login();
 
       // Go to home
-      navigate("/#");
+      navigate("/");
     } else {
       console.log("error in response");
-      alert(data.message);
+      alert(data);
     }
   };
   return (
@@ -43,7 +47,7 @@ function Loginpage() {
           <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-accent-green text-3xl">
             🎓
           </div>
-          <h1 className="text-3xl font-bold text-gray-800">Kamesama</h1>
+          <h1 className="text-3xl font-bold text-gray-800">Kamisama</h1>
           <p className="mt-1 text-gray-500">Children's Academy</p>
         </div>
 
