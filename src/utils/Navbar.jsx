@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import { NAV_LINKS } from "../data/SiteData";
-import { UserIcon, LogoutIcon } from "./Icons";
+import { UserIcon, LogoutIcon } from "../components/Icons";
 import { useAuth } from "../context/AuthContext";
 
 export default function Navbar() {

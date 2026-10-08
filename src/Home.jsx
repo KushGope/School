@@ -1,5 +1,5 @@
 import Features from "./Feature/Features";
-import Hero from "./components/Hero";
+import Hero from "./utils/Hero";
 
 const Home = () => {
   return (

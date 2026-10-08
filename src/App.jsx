@@ -1,20 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Footer from "./utils/Footer";
+import Navbar from "./utils/Navbar";
 import Home from "./Home";
-import Contact from "./Contact";
-import About from "./About";
+import Contact from "./utils/Contact";
+import About from "./utils/About";
 import AdmissionForm from "./data/AdmissionForm";
 import Loginpage from "./login/Login";
 import Logout from "./login/Logout";
 import Gallery from "./gallery/Gallery";
 import Academics from "./academics/Academics";
+import ScrollToTop from "./context/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-bg-beige flex flex-col px-4 md:px-8 py-4">
         <Navbar />
 
