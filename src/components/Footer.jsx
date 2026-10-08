@@ -10,7 +10,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               <a
-                href="#about"
+                href="/about"
                 className="hover:text-accent-green transition-colors"
               >
                 About
@@ -18,7 +18,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#admissions"
+                href="/admission"
                 className="hover:text-accent-green transition-colors"
               >
                 Admissions
@@ -26,7 +26,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#academics"
+                href="/academics"
                 className="hover:text-accent-green transition-colors"
               >
                 Academics
@@ -34,7 +34,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#gallery"
+                href="/gallery"
                 className="hover:text-accent-green transition-colors"
               >
                 Gallery

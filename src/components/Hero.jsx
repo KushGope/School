@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section className="bg-card-white rounded-3xl p-8 md:p-12 border border-black/5 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -9,9 +11,13 @@ export default function Hero() {
           Streamline coordination, establish your operational hub, and watch
           modern milestones materialize instantly.
         </p>
-        <button className="bg-accent-green hover:bg-accent-green/90 text-card-white px-6 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm">
+
+        <Link
+          to="/admission"
+          className="bg-accent-green hover:bg-accent-green/90 text-card-white px-6 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm"
+        >
           Get Started
-        </button>
+        </Link>
       </div>
 
       {/* Hero Illustration */}

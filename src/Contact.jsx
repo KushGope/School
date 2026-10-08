@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="min-h-screen px-4 py-12">
+    <div className="px-4 py-12">
       {/* Page Container */}
       <div className="mx-auto max-w-6xl">
         {/* Main Content */}

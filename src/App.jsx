@@ -9,6 +9,8 @@ import About from "./About";
 import AdmissionForm from "./data/AdmissionForm";
 import Loginpage from "./login/Login";
 import Logout from "./login/Logout";
+import Gallery from "./gallery/Gallery";
+import Academics from "./academics/Academics";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/academics" element={<Academics />} />
         </Routes>
 
         <Footer />

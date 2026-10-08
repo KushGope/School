@@ -1,10 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 import { NAV_LINKS } from "../data/SiteData";
 import { UserIcon, LogoutIcon } from "./Icons";
 import { useAuth } from "../context/AuthContext";
-// import { useAuth } from "./context/AuthContext";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -35,6 +33,9 @@ export default function Navbar() {
     }
     if (link === "Gallery") {
       navigate("/gallery");
+    }
+    if (link === "Academics") {
+      navigate("/academics");
     }
   };
 
