@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./utils/Footer";
 import Navbar from "./utils/Navbar";
-import Home from "./Home";
+import Home from "./landing/Home";
 import Contact from "./utils/Contact";
 import About from "./utils/About";
-import AdmissionForm from "./data/AdmissionForm";
+import AdmissionForm from "./admission/AdmissionForm";
 import Loginpage from "./login/Login";
 import Logout from "./login/Logout";
 import Gallery from "./gallery/Gallery";
@@ -17,11 +17,12 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-bg-beige flex flex-col px-4 md:px-8 py-4">
+      <div className="min-h-screen bg-background flex flex-col px-4 md:px-8 py-4">
         <Navbar />
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/admission" element={<AdmissionForm />} />
           <Route path="/login" element={<Loginpage />} />
           <Route path="/logout" element={<Logout />} />

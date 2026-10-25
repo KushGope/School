@@ -16,6 +16,39 @@ export function LightningIcon() {
   );
 }
 
+export function AcademicIcon() {
+  return (
+    <svg
+      className="h-auto w-full max-w-sm"
+      viewBox="0 0 400 300"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Schoolhouse with a flag and two children"
+    >
+      {/* Flag */}
+      <path d="M200 80V35" stroke="#1f1f1f" strokeWidth="4" />
+      <path d="M202 37H230V52H202" fill="#6b8f71" />
+
+      {/* School */}
+      <path d="M120 130L200 80L280 130" stroke="#6b8f71" strokeWidth="6" />
+      <rect x="130" y="130" width="140" height="130" rx="4" fill="#eae3d2" />
+      <rect x="150" y="150" width="30" height="30" rx="3" fill="#ffffff" />
+      <rect x="220" y="150" width="30" height="30" rx="3" fill="#ffffff" />
+      <rect x="185" y="200" width="30" height="50" rx="3" fill="#6b8f71" />
+
+      {/* Children */}
+      <circle cx="75" cy="210" r="10" fill="#1f1f1f" />
+      <path d="M62 250C62 229 88 229 88 250V265H62V250Z" fill="#6b8f71" />
+
+      <circle cx="325" cy="210" r="10" fill="#1f1f1f" />
+      <path d="M312 250C312 229 338 229 338 250V265H312V250Z" fill="#6b8f71" />
+
+      {/* Ground */}
+      <path d="M45 265H355" stroke="#1f1f1f" strokeWidth="2" />
+    </svg>
+  );
+}
 export function ShieldIcon() {
   return (
     <svg
@@ -102,6 +135,26 @@ export function LogoutIcon() {
         strokeLinejoin="round"
         d="M18 15l3-3m0 0l-3-3m3 3H9"
       />
+    </svg>
+  );
+}
+
+// ArrowRightIcon.jsx;
+export function ArrowRightIcon({ className = "w-4 h-4" }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
     </svg>
   );
 }

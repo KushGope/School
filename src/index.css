@@ -1,15 +1,20 @@
 @import "tailwindcss";
+@import "./theme.css";
 
-@theme {
-  --color-bg-beige: #eae3d2;
-  --color-card-white: #ffffff;
-  --color-text-dark: #1f1f1f;
-  --color-accent-green: #6b8f71;
+/* Global reset and theme */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--color-bg-beige);
-  color: var(--color-text-dark);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   font-family:
     system-ui,
     -apple-system,
@@ -20,6 +25,42 @@ body {
     Ubuntu,
     Cantarell,
     sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Consistent interactive elements */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
