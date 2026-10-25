@@ -15,7 +15,7 @@ import ScrollToTop from "./context/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/School/">
       <ScrollToTop />
       <div className="min-h-screen bg-background flex flex-col px-4 md:px-8 py-4">
         <Navbar />
