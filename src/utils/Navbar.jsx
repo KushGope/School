@@ -104,7 +104,7 @@ export default function Navbar() {
 
       <nav className="hidden md:flex items-center gap-8">
         {NAV_LINKS.map((link) => (
-          <Link
+          <button
             key={link}
             // href="/"
             type="button"
@@ -112,7 +112,7 @@ export default function Navbar() {
             className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
           >
             {link}
-          </Link>
+          </button>
         ))}
       </nav>
 
