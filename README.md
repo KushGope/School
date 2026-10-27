@@ -30,18 +30,18 @@ A modern, responsive school website built with React, Vite, Tailwind CSS, and Re
 
 ## 🛠️Technology Stack
 
-| Technology | Purpose |
-| :--- | :--- |
-| React | User interface |
-| Vite | Development server and production build |
-| JavaScript (ES6+) | Application logic |
-| Tailwind CSS | Utility-first styling |
-| React Router DOM | Client-side navigation |
-| React Context API | Shared authentication state |
-| Spring Boot | Backend REST API |
-| Spring Security | Authentication and authorization |
-| GitHub Pages | Frontend hosting |
-| Render | Backend hosting |
+| Technology        | Purpose                                 |
+| :---------------- | :-------------------------------------- |
+| React             | User interface                          |
+| Vite              | Development server and production build |
+| JavaScript (ES6+) | Application logic                       |
+| Tailwind CSS      | Utility-first styling                   |
+| React Router DOM  | Client-side navigation                  |
+| React Context API | Shared authentication state             |
+| Spring Boot       | Backend REST API                        |
+| Spring Security   | Authentication and authorization        |
+| GitHub Pages      | Frontend hosting                        |
+| Render            | Backend hosting                         |
 
 ## 📂Project Structure
 
@@ -129,8 +129,8 @@ School/
 The Spring Boot backend currently defines in-memory demo accounts.
 
 | Username / Email | Password |
-| :--- | :--- |
-| kami@school.com | password |
+| :--------------- | :------- |
+| kami@school.com  | password |
 
 Example login request:
 
@@ -288,4 +288,4 @@ npm run build
 
 ## 👨‍💻Author
 **Kush Gope**  
-GitHub: [https://github.com/kushgope](https://github.com/kushgope)
+[linkedin.com/in/kushgope](https://www.linkedin.com/in/kushgope)
