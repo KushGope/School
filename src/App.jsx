@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import Footer from "./utils/Footer";
@@ -15,12 +15,14 @@ import ScrollToTop from "./context/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter basename="/School/">
+    <HashRouter>
       <ScrollToTop />
       <div className="min-h-screen bg-background flex flex-col px-4 md:px-8 py-4">
         <Navbar />
 
         <Routes>
+          {/* Fallback: show Home for unknown routes */}
+          <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/admission" element={<AdmissionForm />} />
@@ -34,7 +36,7 @@ function App() {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
