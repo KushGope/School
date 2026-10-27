@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { NAV_LINKS } from "../data/SiteData";
 import { UserIcon, LogoutIcon } from "../components/Icons";
 import { useAuth } from "../context/AuthContext";
@@ -8,15 +8,12 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const { isLoggedIn, logout } = useAuth();
-  const [success, setSuccess] = useState(false);
+  const success = Boolean(location.state?.loginSuccess);
 
   useEffect(() => {
-    if (!location.state?.loginSuccess) return;
-    setSuccess(true);
+    if (!success) return;
 
     const timer = setTimeout(() => {
-      setSuccess(false);
-
       navigate(location.pathname, {
         replace: true,
         state: null,
@@ -24,7 +21,7 @@ export default function Navbar() {
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, [location.state, location.pathname, navigate]);
+  }, [success, location.pathname, navigate]);
 
   const handleLoginClick = async () => {
     if (isLoggedIn) {

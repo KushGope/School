@@ -11,19 +11,20 @@ function Loginpage() {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
+
+  const API_URL = import.meta.env.VITE_API_URL || "";
+
   const handleLoginClick = async (e) => {
     e.preventDefault();
     setError("");
     setLoading(true);
 
     try {
-      const response = await fetch("/school/login", {
+      const response = await fetch(`${API_URL}/school/login`, {
         method: "POST",
-
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify({
           email: email,
           password: password,

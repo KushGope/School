@@ -4,10 +4,11 @@ import { useEffect } from "react";
 
 export default function Home() {
   // Call gotoHome automatically when Navbar loads
+  const API_URL = import.meta.env.VITE_API_URL || "";
   useEffect(() => {
     const gotoHome = async () => {
       try {
-        const response = await fetch("/school/home", {
+        const response = await fetch(`${API_URL}/school/home`, {
           method: "GET",
         });
 
@@ -20,7 +21,7 @@ export default function Home() {
     };
 
     gotoHome();
-  }, []);
+  }, [API_URL]);
   return (
     <main className="max-w-6xl w-full mx-auto mt-6 flex-1 flex flex-col gap-6">
       <Hero />
