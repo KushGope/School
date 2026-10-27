@@ -22,11 +22,8 @@ const Contact = () => {
                 <h3 className="font-semibold">Address</h3>
 
                 <p className="mt-1 text-sm text-white/90">
-                  Your School Address
-                  <br />
-                  Purulia, West Bengal
-                  <br />
-                  India
+                  123 Nippon Lane, Shogun, Õsaka <br />
+                  Northe Wasseypur
                 </p>
               </div>
             </div>
@@ -38,7 +35,7 @@ const Contact = () => {
               <div>
                 <h3 className="font-semibold">Phone</h3>
 
-                <p className="mt-1 text-sm text-white/90">+91 7001740430</p>
+                <p className="mt-1 text-sm text-white/90">+91 1122334455</p>
               </div>
             </div>
 
