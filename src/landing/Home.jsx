@@ -7,7 +7,7 @@ export default function Home() {
   useEffect(() => {
     const gotoHome = async () => {
       try {
-        const response = await fetch("/api/home", {
+        const response = await fetch("/school/home", {
           method: "GET",
         });
 

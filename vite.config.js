@@ -8,7 +8,7 @@ export default defineConfig({
   base: "/School/",
   server: {
     proxy: {
-      "/api": {
+      "/school": {
         // target: "http://localhost:8080",
         target: "https://login-3pvf.onrender.com",
         changeOrigin: true,

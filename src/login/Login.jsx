@@ -17,7 +17,7 @@ function Loginpage() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/login", {
+      const response = await fetch("/school/login", {
         method: "POST",
 
         headers: {
